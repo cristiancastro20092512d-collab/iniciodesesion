@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,64 +8,172 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+        }
+
+        /* Sidebar Fija */
+        .instagram-sidebar {
+            width: 245px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #000;
+            border-right: 1px solid #262626;
+            padding: 20px 12px;
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .sidebar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px 12px 30px 12px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebar-menu .nav-link {
+            color: #f5f5f5;
+            font-size: 1rem;
+            padding: 12px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 4px;
+        }
+
+        .sidebar-menu .nav-link:hover {
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .sidebar-menu .nav-link i {
+            font-size: 1.4rem;
+        }
+
+        /* Contenido principal desplazado para no quedar debajo de la barra */
+        .main-content {
+            margin-left: 245px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Ajustes responsivos para pantallas pequeñas */
+        @media (max-width: 992px) {
+            .instagram-sidebar {
+                width: 75px;
+            }
+
+            .instagram-sidebar span {
+                display: none;
+            }
+
+            .main-content {
+                margin-left: 75px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: #252525;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="color: white;">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" style="color: white;">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: white;">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: white;">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true" style="color: white;">Disabled</a>
-                    </li>
-                </ul>
+
+    <aside class="instagram-sidebar">
+        <a href="#" class="sidebar-brand">
+            <span>Instagram</span>
+        </a>
+        <ul class="nav nav-pills flex-column sidebar-menu mb-auto">
+            <li class="nav-item">
+                <a href="#" class="nav-link active bg-transparent text-white fw-bold">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-search"></i>
+                    <span>Buscar</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-compass"></i>
+                    <span>Explorar</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-film"></i>
+                    <span>Reels</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-chat-dots"></i>
+                    <span>Mensajes</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-heart"></i>
+                    <span>Notificaciones</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-plus-square"></i>
+                    <span>Crear</span>
+                </a>
+            </li>
+        </ul>
+        <div class="sidebar-menu">
+            <a href="#" class="nav-link">
+                <i class="bi bi-list"></i>
+                <span>Más</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="perfil1">
+            <div class="card bg-dark text-white border-secondary" style="width: 18rem;">
+                <img src="img/y3SDeEByaHBSTp_an66h.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+                </div>
             </div>
         </div>
-    </nav>
 
-    <div class="perfil1">
-        <div class="card" style="width: 18rem;">
-            <img src="img/y3SDeEByaHBSTp_an66h.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card’s content.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="perfil2">
-        <div class="card" style="width: 18rem;">
-            <img src="img/images.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card’s content.</p>
+        <div class="perfil2">
+            <div class="card bg-dark text-white border-secondary" style="width: 18rem;">
+                <img src="img/images.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+                </div>
             </div>
         </div>
 
         <div class="perfil3">
-            <div class="card" style="width: 18rem;">
-                <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="card bg-dark text-white border-secondary" style="width: 18rem;">
+                <div id="carousel1" class="carousel slide">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active"
+                            aria-current="true"></button>
+                        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -78,12 +186,12 @@
                             <img src="img/spider2.jpg" class="d-block w-100" alt="...">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel1"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel1"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
@@ -97,7 +205,7 @@
         </div>
 
         <div class="perfil4">
-            <div class="card" style="width: 18rem;">
+            <div class="card bg-dark text-white border-secondary" style="width: 18rem;">
                 <img src="img/random-pic-ideas-2.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -107,7 +215,7 @@
         </div>
 
         <div class="perfil5">
-            <div class="card" style="width: 18rem;">
+            <div class="card bg-dark text-white border-secondary" style="width: 18rem;">
                 <img src="img/201852417-288-k679776.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -117,7 +225,7 @@
         </div>
 
         <div class="perfil6">
-            <div class="card" style="width: 18rem;">
+            <div class="card bg-dark text-white border-secondary" style="width: 18rem;">
                 <img src="img/images (1).jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -127,7 +235,7 @@
         </div>
 
         <div class="perfil7">
-            <div class="card" style="width: 18rem;">
+            <div class="card bg-dark text-white border-secondary" style="width: 18rem;">
                 <img src="img/760069a2264ee104faea77c1853b9dfb.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -137,15 +245,13 @@
         </div>
 
         <div class="perfil8">
-            <div class="card" style="width: 18rem;">
-                <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="card bg-dark text-white border-secondary" style="width: 18rem;">
+                <div id="carousel2" class="carousel slide">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active"
+                            aria-current="true"></button>
+                        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -158,12 +264,12 @@
                             <img src="img/pastel3.jpg" class="d-block w-100" alt="...">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel2"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel2"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
@@ -176,24 +282,11 @@
             </div>
         </div>
 
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-        </ul>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
